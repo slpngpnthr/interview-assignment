@@ -1,0 +1,14 @@
+{
+  "name": "airtekassignement",
+  "version": "1.0.0",
+  "description": "(cypress) Test automation for Search and Where to Buy features ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Doruk Babaoglu",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.2"
+  }
+}
