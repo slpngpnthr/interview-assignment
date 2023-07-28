@@ -68,7 +68,6 @@ class SearchResultsPage {
    
    */
   setProductCategoryFilter(filter) {
-    
     //CHALLENGE: I had to try different ways for selecting the filter checkbox,
     //           because page could not be scrolled to the filter checkbox
     cy.get(`input[id='productfields.product_category${filter}']`)
@@ -78,15 +77,12 @@ class SearchResultsPage {
     cy.waitForLoader();
   }
 
-  
   /**
    * Select / Unselect filter in Product Series filter group
-   * IMPROVE: add multiple filters selection, 
+   * IMPROVE: add multiple filters selection,
    * @param {*} filter
-   
    */
   setProductSeriesFilter(filter) {
-    
     cy.get(`input[id='productlookups.series.internal_value${filter}']`)
       .scrollIntoView({ behavior: "instant" })
       .check({ force: true });
@@ -117,8 +113,8 @@ class SearchResultsPage {
     this.selectedFilterList
       .scrollIntoView()
       .click({ multiple: true, force: true });
-      this.selectedFilterList.should("not.exist");
-      return this;
+    this.selectedFilterList.should("not.exist");
+    return this;
   }
 
   /**

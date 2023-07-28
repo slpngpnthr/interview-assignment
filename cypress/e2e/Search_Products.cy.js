@@ -1,4 +1,3 @@
-// sample-test.spec.js
 import MaaxMainPage from "../support/pages/mainPage.po";
 import SearchResultsPage from "../support/pages/searchResult.po";
 
@@ -27,36 +26,20 @@ describe("MAAX Website - Search for Product", () => {
       cy.visitMaaxUSA();
 
       //Search by Product ID
-      mainPage.searchInput
-        .click({ waitForAnimations: false })
-        .scrollIntoView()
-        .type(product.productId, { force: true });
-      mainPage.autoSuggestList.filter(":visible").should("have.length", 3);
-      mainPage.searchInput.type("{enter}", { force: true });
-
-      searchPage.verifyProductDetails(product);
+      mainPage.performSearchWithText(product.productId, 1),
+        searchPage.verifyProductDetails(product);
 
       //Search by Product NAme
       //ASSUMPTION: The prodcut will be displayed/listed
-      //            within the first 12 product listed in search results,
+      //            in the first 12 product listed in search results,
       cy.visitMaaxUSA();
-      mainPage.searchInput
-        .click({ waitForAnimations: false })
-        .scrollIntoView()
-        .type(product.name, { force: true });
-      mainPage.autoSuggestList.filter(":visible").should("have.length", 5);
-      mainPage.searchInput.type("{enter}", { force: true });
-
+      mainPage.performSearchWithText(product.name, 15);
       searchPage.verifyProductDetails(product);
     });
   });
 
-  it("Verify search filters - Failed Test", () => {
-    //perform search with keyword
-
-    mainPage.performSearch(searchDetails)
-    //searchPage.loadAllProducts(searchDetails.productCount);
-    //cy.wait(3000);
+  it.only("Verify search filters - Product Category - Failed Test (Actual Bug)", () => {
+    mainPage.performSearch(searchDetails);
 
     //#region Verify Product Category Filter
     //Verify productCategoryFilter is expanded
@@ -64,44 +47,45 @@ describe("MAAX Website - Search for Product", () => {
       .parent()
       .next()
       .should("have.attr", "aria-hidden", "false");
-
+    //select each product category filter and verify the product count
     searchDetails.filters.productCategories.forEach((filter) => {
       searchPage.setProductCategoryFilter(filter.name);
       searchPage.productTab.shouldContainText(filter.productCount);
-      
+
       if (filter.productCount > 12) {
         searchPage.productList.should("have.length", 12);
         searchPage.loadAllProducts(filter.productCount);
-      } 
+      }
       searchPage.productList.should("have.length", filter.productCount);
       searchPage.loadMoreButton.should("not.exist");
-      
+
       searchPage.clearFilters();
     });
-    //#endregion Verify Product Category Filter
-    
+  });
+  //#endregion Verify Product Category Filter
+  it("Verify search filters - Product Series - Failed Test (Actual Bug)", () => {
+    mainPage.performSearch(searchDetails);
     //#region Verify Product Series Filter
     searchPage.productSeriesFilter
       .parent()
       .next()
       .should("have.attr", "aria-hidden", "false");
-    
-      searchDetails.filters.productSeries.forEach((filter) => {
-        searchPage.setProductSeriesFilter(filter.name);
-        searchPage.productTab.shouldContainText(filter.productCount);
-        
-        if (filter.productCount > 12) {
-          searchPage.productList.should("have.length", 12);
-          searchPage.loadAllProducts(filter.productCount);
-        } 
-        searchPage.productList.should("have.length", filter.productCount);
-        searchPage.loadMoreButton.should("not.exist");
-        
-        searchPage.clearFilters();
-      });
 
-      //#endregion Verify Product Series Filter
+    //select each product series filter and verify the product count
+    searchDetails.filters.productSeries.forEach((filter) => {
+      searchPage.setProductSeriesFilter(filter.name);
+      searchPage.productTab.shouldContainText(filter.productCount);
 
-    //verify Prodcut Category filters
+      if (filter.productCount > 12) {
+        searchPage.productList.should("have.length", 12);
+        searchPage.loadAllProducts(filter.productCount);
+      }
+      searchPage.productList.should("have.length", filter.productCount);
+      searchPage.loadMoreButton.should("not.exist");
+
+      searchPage.clearFilters();
+    });
+
+    //#endregion Verify Product Series Filter
   });
 });

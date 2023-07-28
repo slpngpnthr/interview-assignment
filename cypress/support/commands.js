@@ -24,15 +24,19 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add("shouldContainText",{ prevSubject: true },(subject, expectedText) => {
-  return cy.wrap(subject).should("contain.text", expectedText);  
-  //expect(subject).to.contain.text(expectedText);
+Cypress.Commands.add(
+  "shouldContainText",
+  { prevSubject: true },
+  (subject, expectedText) => {
+    return cy.wrap(subject).should("contain.text", expectedText);
   }
 );
 
-Cypress.Commands.add(  "shouldHaveText",  { prevSubject: true }, (subject, expectedText) => {
-  return cy.wrap(subject).should("have.text", expectedText);    
-  //expect(subject).to.have.text(expectedText);
+Cypress.Commands.add(
+  "shouldHaveText",
+  { prevSubject: true },
+  (subject, expectedText) => {
+    return cy.wrap(subject).should("have.text", expectedText);
   }
 );
 
