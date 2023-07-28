@@ -1,0 +1,26 @@
+{
+  "keyword": "Medicine Cabinet door",
+  "productCount": "17",
+  "filters": {
+    "productCategories": [
+      { "name": "Shower Door", "productCount": 2 },
+      { "name": "Medicine Cabinet", "productCount": 15 }
+    ],
+    "productSeries": [
+      { "name": "Collection", "productCount": 15 },
+      { "name": "Maax", "productCount": 2}
+    ],
+    "frameFinish": [
+      { "name": "Chrome", "productCount": 15 },
+      { "name": "Brushed Nickel", "productCount": 2},
+      { "name": "Matte Black", "productCount": 2},
+      { "name": "White", "productCount": 2}
+    ]
+  },
+
+  "products":{
+"product1": {
+
+  }
+}
+}

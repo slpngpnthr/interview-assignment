@@ -24,25 +24,24 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add(
-  "shouldContainText",
-  { prevSubject: true },
-  (subject, expectedText) => {
-    expect(subject).to.contain.text(expectedText);
+Cypress.Commands.add("shouldContainText",{ prevSubject: true },(subject, expectedText) => {
+  return cy.wrap(subject).should("contain.text", expectedText);  
+  //expect(subject).to.contain.text(expectedText);
   }
 );
 
 Cypress.Commands.add(  "shouldHaveText",  { prevSubject: true }, (subject, expectedText) => {
-    expect(subject).to.have.text(expectedText);
+  return cy.wrap(subject).should("have.text", expectedText);    
+  //expect(subject).to.have.text(expectedText);
   }
 );
 
 Cypress.Commands.add("shouldBeVisible", { prevSubject: true }, (subject) => {
-  cy.wrap(subject).should("be.visible");
+  return cy.wrap(subject).should("be.visible");
 });
 
 Cypress.Commands.add("shouldNotBeVisible", { prevSubject: true }, (subject) => {
-  cy.wrap(subject).should("not.be.visible");
+  return cy.wrap(subject).should("not.be.visible");
 });
 
 Cypress.Commands.add("waitForLoader", () => {

@@ -4,7 +4,7 @@
 "products":[{
   "name":"Exhibit 6632 IF Acrylic Alcove Bathtub",
   "dimensions":"65 7/8\" x 32\" x 18\"",
-  "sku":"106220",
+  "productId":"106220",
   "colors":["White","Bone","Biscuit"],
   "displayPrice":"1,138.00",
   "currency":"USD",
@@ -15,7 +15,7 @@
 {
   "name":"Tenderness 6036 Acrylic Alcove Bathtub",
   "dimensions":"59 7/8\" x 35 3/4\" x 20\"",
-  "sku":"102202",
+  "productId":"102202",
   "colors":["White","Bone","Biscuit"],
   "displayPrice":"1,490.00",
   "currency":"USD",
@@ -26,7 +26,7 @@
 {
   "name":"Icon 6036 AcrylX Alcove Shower Base",
   "dimensions":"60\" x 36\" x 4 1/4\"",
-  "sku":"106762",
+  "productId":"106762",
   "colors":["White"],
   "displayPrice":"669.00",
   "currency":"USD",
@@ -36,7 +36,7 @@
 {
   "name":"Utile 36 in. Composite Direct-to-Stud Back Wall",
   "dimensions":"36\" x 80\" x 1 1/8\"",
-  "sku":"103416",
+  "productId":"103416",
   "colors":["Vapor","Tux","Permafrost","Loam", "Clay", "Carrara"],
   "displayPrice":"960.00",
   "currency":"USD",
