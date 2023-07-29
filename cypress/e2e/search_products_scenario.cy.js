@@ -21,8 +21,7 @@ describe("MAAX Website - Search for Product", () => {
     mainPage.acceptAllCookiesButton.click();
   });
 
-  it(
-    "Search for a single Product and verify product details",
+  it("Search for a single Product and verify product details",
     { retries: { runMode: 2, openMode: 1 } },
     () => {
       //Search for each product and verify the product details
@@ -44,7 +43,7 @@ describe("MAAX Website - Search for Product", () => {
   );
 
   it("Verify search filters - Product Category - Failed Test (Actual Bug)", () => {
-    //ISSUE/BUG: The product category filter is not working as expected (Sometimes - can be reproduced manually)
+    //ISSUE/BUG: The product category filter is not working as expected, (Sometimes - can be reproduced manually)
 
     //perform search using the search details
     mainPage.performSearch(searchDetails);
