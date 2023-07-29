@@ -1,0 +1,84 @@
+{
+  "notes1": "This is a sample JSON file.  It is used to demonstrate the functionality of the store locator.",
+  "cities": [
+    {
+      "cityName": "Yellowknife, Northwest Territories, Canada",
+      "storeCount": 1
+    },
+    {
+      "cityName": "Rosseau, Ontario, Canada",
+      "storeCount": 42
+    },
+    {
+      "cityName": "Huntsville, Ontario, Canada",
+      "storeCount": 37
+    }
+  ],
+  "notes2": "This is a sample JSON file. cordinates are used to update Browser's geolocation.",
+
+  "cordinates": [
+    {
+      "latitude": 45.394338269123,
+      "longitude": -102.758960874384,
+      "storeCount": 1,
+      "stores": [
+        {
+          "storeName": "BUFFALO HARDWARE",
+          "storeAddress1": "216 MAIN STREET,",
+          "storeAddress2": "BUFFALO, SD, US, 57720",
+          "storePhone": "605-375-3322",
+          "distance": 49.8
+        }
+      ]
+    },
+    {
+      "latitude": 35.394338269123,
+      "longitude": -85.758960874384,
+      "storeCount": 26,
+      "stores": [
+        {
+          "storeName": "BUILDERS SUPPLY",
+          "storeAddress1": "239 COLLEGE STREET",
+          "storeAddress2": "MONTEAGLE, TN, US, 37356",
+          "storePhone": "931-924-2048",
+          "distance": 21.2
+        },
+        {
+          "storeName": "PIONEER BUILDING SUPPLY INC",
+          "storeAddress1": "1655 MORRISON ROAD,",
+          "storeAddress2": "MCMINNVILLE, TN, US, 37110",
+          "storePhone": "931-473-7777",
+          "distance": 28.5
+        },
+        {
+          "storeName": "WILLIAMS WHOLESALE",
+          "storeAddress1": "1830 BEERSHEBA HIGHWAY,",
+          "storeAddress2": "MCMINNVILLE, TN, US, 37110",
+          "storePhone": "931-507-8038",
+          "distance": 28.1
+        },
+        {
+          "storeName": "VALLEY PLUMBING AND ELECTRIC",
+          "storeAddress1": "15050 RANKIN AVE SOUTH,",
+          "storeAddress2": "DUNLAP, TN, US, 37327",
+          "storePhone": "423-949-4959",
+          "distance": 37
+        },
+        {
+          "storeName": "SUPREME BUILDING PRODUCTS",
+          "storeAddress1": "770 NORTH SPRING STREET,",
+          "storeAddress2": "MCMINNVILLE, TN, US, 37110",
+          "storePhone": "931-473-9564",
+          "distance": 31.1
+        },
+        {
+          "storeName": "LOWE'S",
+          "storeAddress1": "1339 SMITHVILLE HIGHWAY STE 10,",
+          "storeAddress2": "MC MINNVILLE, TN, US, 37110",
+          "storePhone": "931-506-0100",
+          "distance": 31.6
+        }
+      ]
+    }
+  ]
+}

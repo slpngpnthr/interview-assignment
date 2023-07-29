@@ -9,6 +9,7 @@
   "author": "Doruk Babaoglu",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.17.2"
+    "cypress": "^12.17.2",
+    "cypress-browser-permissions": "^1.1.0"
   }
 }

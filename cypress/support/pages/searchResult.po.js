@@ -64,8 +64,7 @@ class SearchResultsPage {
   /**
    * Select / Unselect filter in Product Category filter group
    * IMPROVE: add multiple filters selection, 
-   * @param {*} filter
-   
+   * @param {*} filter   
    */
   setProductCategoryFilter(filter) {
     //CHALLENGE: I had to try different ways for selecting the filter checkbox,
@@ -73,7 +72,7 @@ class SearchResultsPage {
     cy.get(`input[id='productfields.product_category${filter}']`)
       .scrollIntoView({ behavior: "instant" })
       .check({ force: true });
-    //});
+    
     cy.waitForLoader();
   }
 

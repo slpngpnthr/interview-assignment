@@ -1,0 +1,28 @@
+
+Step 1: Clone the GitHub Repository
+
+Link and collaboration request sent to: james@air-tek.ca
+
+Step 2: Install Project Dependencies
+
+Navigate to the project directory (the one you just cloned) using the terminal or command prompt, and install the project dependencies using npm:
+
+npm install
+
+you may also need to install: 
+npm i cypress-browser-permissions --save-dev
+
+Step 3: Execute the npx cypress run Command
+
+npx cypress run --browser chrome --record --key 5a32a23f-b0e4-4303-a001-edd7dd3a44c7
+
+After executing the npx cypress run command, Cypress will run the tests in Chrome browser, record the results on the Cypress Dashboard using the provided record key, and display the test output in the terminal.
+
+Step 4: You can see the results in Cypress Dashboard
+Invite to access Cypress dashboard for this project was sent to : james@air-tek.ca
+
+also here is a link to the dashboard: https://cloud.cypress.io/invitation/e475abbc-7afa-4097-bb97-614d46f7ff1e
+
+
+
+
